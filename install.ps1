@@ -1,7 +1,7 @@
 #===========================================================================
 # Derek "Turtle" Roe
 # Windows install script
-# Licensed under the GNU GPLv3 or later
+# Licensed under the Unlicense
 #===========================================================================
 
 
@@ -46,7 +46,6 @@ winget install --id=SomePythonThings.WingetUIStore -e ;
 # Web browsers
 #===========================================================================
 winget install --id=BraveSoftware.BraveBrowser -e  ;
-winget install --id=Opera.OperaGX -e  ;
 winget install --id=LibreWolf.LibreWolf -e  ;
 winget install --id=TorProject.TorBrowser -e  ;
 
@@ -58,16 +57,16 @@ winget install --id=EpicGames.EpicGamesLauncher -e  ;
 winget install --id=ElectronicArts.EADesktop -e  ;
 winget install --id=Ubisoft.Connect -e  ;
 winget install --id=GOG.Galaxy -e  ;
-winget install --id=Wargaming.GameCenter -e ;
-winget install --id=GaijinNetwork.WarThunder -e ;
+# winget install --id=Wargaming.GameCenter -e ;
+# winget install --id=GaijinNetwork.WarThunder -e ;
 winget install --id=ItchIo.Itch -e ;
-winget install --id=Amazon.Games -e ;
+# winget install --id=Amazon.Games -e ;
 
 #===========================================================================
 # Launchers
 #===========================================================================
 winget install --id=Playnite.Playnite -e ;
-winget install --id=Emulationstation.Emulationstation -e ;
+# winget install --id=Emulationstation.Emulationstation -e ;
 
 #===========================================================================
 # Riot Games
@@ -79,12 +78,12 @@ winget install --id=RiotGames.LeagueOfLegends.NA -e ;
 # Game mods
 #===========================================================================
 winget install --id=NexusMods.Vortex -e ;
-winget install --id=winget install --id=WeMod.WeMod -e  ; -e ;
+winget install --id=WeMod.WeMod -e  ; -e ;
 
 #===========================================================================
 # RuneScape
 #===========================================================================
-winget install --id=OpenOSRS.OpenOSRSLauncher -e ;
+# winget install --id=OpenOSRS.OpenOSRSLauncher -e ;
 
 #===========================================================================
 # Minecraft
@@ -94,24 +93,24 @@ winget install --id=Mojang.MinecraftLauncher -e ;
 #===========================================================================
 # Games
 #===========================================================================
-winget install --id=Wesnoth.BattleForWesnoth -e ;
-winget install --id=Peppy.Osu! -e  ;
-winget install --id=TheTTRTeam.ToontownRewritten -e  ;
-winget install --id=WildfireGames.0AD -e ;
-winget install --id=XMoto.XMoto -e ;
-winget install --id=Warzone2100Project.Warzone2100 -e ;
-winget install --id=SuperTuxKart.SuperTuxKart -e ;
-winget install --id=SuperTux.SuperTux -e ;
-winget install --id=RabidViperProductions.AssaultCube -e ;
-winget install --id=QuintonReeves.RedEclipse -e ;
-winget install --id=PokerTH.PokerTH -e ;
-winget install --id=OpenTTD.OpenTTD -e ;
-winget install --id=OpenRA.OpenRA -e ;
-winget install --id=FreeCiv.FreeCiv -e ;
-winget install --id=BrutalChess.BrutalChess -e ;
-winget install --id=Aardappel.Cube -e ;
-winget install --id=Fangamer.Deltarune -e ;
-winget install --id=DavidJoffe.DaveGnukem -e ;
+# winget install --id=Wesnoth.BattleForWesnoth -e ;
+# winget install --id=Peppy.Osu! -e  ;
+# winget install --id=TheTTRTeam.ToontownRewritten -e  ;
+# winget install --id=WildfireGames.0AD -e ;
+# winget install --id=XMoto.XMoto -e ;
+# winget install --id=Warzone2100Project.Warzone2100 -e ;
+# winget install --id=SuperTuxKart.SuperTuxKart -e ;
+# winget install --id=SuperTux.SuperTux -e ;
+# winget install --id=RabidViperProductions.AssaultCube -e ;
+# winget install --id=QuintonReeves.RedEclipse -e ;
+# winget install --id=PokerTH.PokerTH -e ;
+# winget install --id=OpenTTD.OpenTTD -e ;
+# winget install --id=OpenRA.OpenRA -e ;
+# winget install --id=FreeCiv.FreeCiv -e ;
+# winget install --id=BrutalChess.BrutalChess -e ;
+# winget install --id=Aardappel.Cube -e ;
+# winget install --id=Fangamer.Deltarune -e ;
+# winget install --id=DavidJoffe.DaveGnukem -e ;
 
 #===========================================================================
 # Controller software
@@ -150,6 +149,7 @@ winget install --id=MSI.Kombustor.4 -e ;
 #===========================================================================
 winget install --id=ShareX.ShareX -e  ;
 winget install --id=File-New-Project.EarTrumpet -e  ;
+winget install --id=Microsoft.PowerShell -e ;
 winget install --id=Microsoft.WindowsTerminal -e  ;
 winget install --id=voidtools.Everything -e  ;
 winget install --id=7zip.7zip -e  ;
@@ -202,31 +202,29 @@ winget install --id=Oracle.JavaRuntimeEnvironment -e ;
 # Drivers
 #===========================================================================
 winget install --id=Nvidia.GeForceExperience -e  ;
-winget install --id=Elgato.StreamDeck -e  ;
 
 #===========================================================================
 # Audio/video
 #===========================================================================
 winget install --id=VideoLAN.VLC -e  ;
-winget install --id=PeterPawlowski.foobar2000 -e  ;
+# winget install --id=PeterPawlowski.foobar2000 -e  ;
 winget install --id=Audacious.MediaPlayer -e ;
 winget install --id=HandBrake.HandBrake -e  ;
-winget install --id=SartoxOnlyGNU.Audacium -e  ;
 winget install --id=Audacity.Audacity -e ;
 winget install --id=CodecGuide.K-LiteCodecPack.Mega -e  ;
 winget install --id=LMMS.LMMS -e  ;
 winget install --id=GuinpinSoft.MakeMKV -e  ;
 winget install --id=AlexanderKojevnikov.Spek -e  ;
-winget install --id=yt-dlg.yt-dlg -e  ;
 winget install --id=Streamlink.Streamlink -e  ;
 winget install --id=Streamlink.Streamlink.TwitchGui -e  ;
 winget install --id=SergeySerkov.TagScanner -e  ;
-winget install --id=yt-dlp.yt-dlp -e ;
 winget install --id=Spotify.Spotify -e ;
 winget install --id=Tenpi.Waifu2xGUI -e ;
 winget install --id=Aegisub.Aegisub -e ;
 winget install --id=PrestonN.FreeTube -e  ;
 winget install --id=jely2002.youtube-dl-gui -e ;
+winget install --id=yt-dlp.yt-dlp -e ;
+winget install --id=yt-dlg.yt-dlg -e  ;
 
 #===========================================================================
 # Streaming software
@@ -236,6 +234,7 @@ winget install --id=Gamecaster.Gamecaster -e ;
 winget install --id=XSplit.Broadcaster -e ;
 winget install --id=Twitch.TwitchStudio -e ;
 winget install --id=Restream.RestreamChat -e ;
+winget install --id=Elgato.StreamDeck -e  ;
 
 #===========================================================================
 # 3D software
@@ -249,7 +248,7 @@ winget install --id=GIMP.GIMP -e  ;
 winget install --id=darktable.darktable -e  ;
 winget install --id=DuongDieuPhap.ImageGlass -e  ;
 winget install --id=Inkscape.Inkscape -e  ;
-winget install --id=XnSoft.XnViewMP -e  ;
+# winget install --id=XnSoft.XnViewMP -e  ;
 winget install --id=OliverBetz.ExifTool -e ;
 winget install --id=Redisant.TinyGUI -e ;
 
@@ -325,7 +324,6 @@ winget install --id=Intel.ProcessorDiagnosticTool -e ;
 #===========================================================================
 winget install --id=Notepad++.Notepad++ -e  ;
 winget install --id=Microsoft.VisualStudioCode -e  ;
-winget install --id=VSCodium.VSCodium -e ;
 winget install --id=mb21.panwriter -e  ;
 
 #===========================================================================
@@ -356,7 +354,6 @@ winget install --id=GDevelop.GDevelop -e ;
 # Virtual machines
 #===========================================================================
 winget install --id=Oracle.VirtualBox -e ;
-winget install --id=VMware.WorkstationPlayer -e  ;
 
 #===========================================================================
 # Email
