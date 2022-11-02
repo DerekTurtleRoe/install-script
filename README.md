@@ -3,4 +3,4 @@ An install script for my personal use.
 
 ```winget upgrade --all``` after this script is run will update all your software for you!
 
-Licensed under the GNU GPLv3
+Licensed under the Unlicense
