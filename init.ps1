@@ -25,6 +25,23 @@ Write-Host
 # Install script start
 #===========================================================================
 
+# Update the help files for PowerShell functions
+Update-Help
+
+# Remove all restrictions on PowerShell scripts
+# PLEASE NOTE: THIS IS INSECURE, PLEASE USE CAUTION/COMMON SENSE WHEN DOING THIS!!!
+# Normal users will want to just run the script using the right click option "Run with PowerShell", 
+# as this gives permission once and then blocks scripts after that
+Set-ExecutionPolicy unrestricted
+
+# Install winget, thanks to Chris Titus for this little script!
+Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+	Install-Script -Name winget-install -Force
+	winget-install.ps1
+
+# Add PowerShell scripts directory to the PATH
+Set-PathVariable AddPath 'C:\Program Files\WindowsPowerShell\Scripts'
+
 # Retrive PowerShell module for updating Windows
 Install-Module -Name PSWindowsUpdate
 
@@ -37,15 +54,23 @@ Install-WindowsUpdate -AcceptAll
 # To exclude certain updates, enter all relevant KB article IDs
 # Hide-WindowsUpdate -KBArticleID KB
 
+# Install Winfetch
+Install-Script winfetch
+
+# Install Winfetch configuration
+Copy-Item -Path .\winfetch\config.ps1 -Destination C:\Users\Turtle\.config\winfetch
+Copy-Item -Path .\winfetch\winfetch.png -Destination C:\Users\Turtle\.config\winfetch
+
 # Install Windows "ultimate power plan"...WARNING: DO NOT run this on a laptop, comment it out!
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 
-# TODO: Activate ultimate power plan
+# Activate ultimate power plan
+powercfg -SETACTIVE e9a42b02-d5df-448d-aa00-03f14749eb61
 
 # Install fonts
 
 # Set the source folder and the destination folder
-$sourceFolder = "C:\Fonts"
+$sourceFolder = ".\fonts"
 $destinationFolder = "C:\Windows\Fonts"
 
 # Get a list of all .ttf files in the source folder
@@ -58,54 +83,5 @@ foreach ($ttfFile in $ttfFiles) {
 
 # Output a message indicating that the files have been copied
 Write-Output "All .ttf files in $sourceFolder have been copied to $destinationFolder"
-
-
-# Install winget, thanks to Chris Titus for this little script!
-Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
-	Install-Script -Name winget-install -Force
-	winget-install.ps1
-
-    function Show-Menu
-    {
-         param (
-               [string]$Title = ‘Software selection’
-         )
-         Clear-Host
-         Write-Host “================ $Title ================”
-        
-         Write-Host “1: Press ‘1’ for essentials.”
-         Write-Host “2: Press ‘2’ for benchmarks.”
-         Write-Host “3: Press ‘3’ for all software.”
-         Write-Host "Press F to pay respects."
-         Write-Host “Q: Press ‘Q’ to quit.”
-    }
-
-    do
-{
-     Show-Menu
-     $userinput = Read-Host “Please make a selection”
-     switch ($userinput)
-     {
-           ‘1’ {
-                Clear-Host
-                ‘You chose option #1’
-           } ‘2’ {
-                Clear-Host
-                ‘You chose option #2’
-           } ‘3’ {
-                Clear-Host
-                ‘You chose option #3’
-           } 
-             ‘F‘ {
-                Clear-Host
-                'You paid your respects'
-           }
-             ‘q’ {
-                return
-           }
-     }
-     pause
-}
-until ($input -eq ‘q’)
 
 winget install --id=Microsoft.Edge ;
