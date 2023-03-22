@@ -42,7 +42,7 @@ Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 # Add PowerShell scripts directory to the PATH
 Set-PathVariable AddPath 'C:\Program Files\WindowsPowerShell\Scripts'
 
-# Retrive PowerShell module for updating Windows
+# Retrieve PowerShell module for updating Windows
 Install-Module -Name PSWindowsUpdate
 
 # Retrieve all Windows updates
@@ -60,6 +60,9 @@ Install-Script winfetch
 # Install Winfetch configuration
 Copy-Item -Path .\winfetch\config.ps1 -Destination C:\Users\Turtle\.config\winfetch
 Copy-Item -Path .\winfetch\winfetch.png -Destination C:\Users\Turtle\.config\winfetch
+
+# TODO: Apply customization as well
+winget install --id=Starship.Starship ;
 
 # Install Windows "ultimate power plan"...WARNING: DO NOT run this on a laptop, comment it out!
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
@@ -86,4 +89,205 @@ Write-Output "All .ttf files in $sourceFolder have been copied to $destinationFo
 
 # Install all of the things! O_O
 
-winget install --id=Microsoft.Edge ; winget install --id=VideoLAN.VLC -e -h --scope "machine" ; winget install --id=Notion.Notion -e -h --scope "machine" ; winget install --id=voidtools.Everything -e -h --scope "machine" ; winget install --id=Notepad++.Notepad++ -e -h --scope "machine" ; winget install --id=GitHub.GitHubDesktop -e -h --scope "machine" ; winget install --id=ShareX.ShareX -e -h --scope "machine" ; winget install --id=Discord.Discord -e -h --scope "machine" ; winget install --id=GIMP.GIMP -e -h --scope "machine" ; winget install --id=File-New-Project.EarTrumpet -e -h --scope "machine" ; winget install --id=Audacity.Audacity -e -h --scope "machine" ; winget install --id=Valve.Steam -e -h --scope "machine" ; winget install --id=EpicGames.EpicGamesLauncher -e -h --scope "machine" ; winget install --id=WinSCP.WinSCP -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.Framework.DeveloperPack_4 -e -h --scope "machine" ; winget install --id=Microsoft.VisualStudioCode -e -h --scope "machine" ; winget install --id=Mozilla.Firefox -e -h --scope "machine" ; winget install --id=OpenJS.NodeJS -e -h --scope "machine" ; winget install --id=Git.Git -e -h --scope "machine" ; winget install --id=7zip.7zip -e -h --scope "machine" ; winget install --id=Microsoft.PowerToys -e -h --scope "machine" ; winget install --id=PrimateLabs.Geekbench.6 -e -h --scope "machine" ; winget install --id=Spotify.Spotify -e -h --scope "machine" ; winget install --id=Inkscape.Inkscape -e -h --scope "machine" ; winget install --id=Bitwarden.Bitwarden -e -h --scope "machine" ; winget install --id=BlenderFoundation.Blender -e -h --scope "machine" ; winget install --id=Codeusa.BorderlessGaming -e -h --scope "machine" ; winget install --id=Brave.Brave -e -h --scope "machine" ; winget install --id=calibre.calibre -e -h --scope "machine" ; winget install --id=CPUID.CPU-Z -e -h --scope "machine" ; winget install --id=CPUID.HWMonitor -e -h --scope "machine" ; winget install --id=CrystalDewWorld.CrystalDiskInfo -e -h --scope "machine" ; winget install --id=CrystalDewWorld.CrystalDiskMark -e -h --scope "machine" ; winget install --id=DuongDieuPhap.ImageGlass -e -h --scope "machine" ; winget install --id=ItchIo.Itch -e -h --scope "machine" ; winget install --id=OBSProject.OBSStudio -e -h --scope "machine" ; winget install --id=Python.Python.3.11 -e -h --scope "machine" ; winget install --id=TechPowerUp.GPU-Z -e -h --scope "machine" ; winget install --id=Tenpi.Waifu2xGUI -e -h --scope "machine" ; winget install --id=GOG.Galaxy -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2015+.x64 -e -h --scope "machine" ; winget install --id=Mozilla.Thunderbird -e -h --scope "machine" ; winget install --id=TorProject.TorBrowser -e -h --scope "machine" ; winget install --id=qBittorrent.qBittorrent -e -h --scope "machine" ; winget install --id=Malwarebytes.Malwarebytes -e -h --scope "machine" ; winget install --id=AntibodySoftware.WizTree -e -h --scope "machine" ; winget install --id=Ubisoft.Connect -e -h --scope "machine" ; winget install --id=PassMark.DiskCheckup -e -h --scope "machine" ; winget install --id=ElectronicArts.EADesktop -e -h --scope "machine" ; winget install --id=TheDocumentFoundation.LibreOffice -e -h --scope "machine" ; winget install --id=Insecure.Nmap -e -h --scope "machine" ; winget install --id=NexusMods.Vortex -e -h --scope "machine" ; winget install --id=angryziber.AngryIPScanner -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2005.x64 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2008.x64 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2010.x64 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2012.x64 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2013.x64 -e -h --scope "machine" ; winget install --id=REALiX.HWiNFO -e -h --scope "machine" ; winget install --id=Amazon.Games -e -h --scope "machine" ; winget install --id=LIGHTNINGUK.ImgBurn -e -h --scope "machine" ; winget install --id=SumatraPDF.SumatraPDF -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.DesktopRuntime.3_1 -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.DesktopRuntime.5 -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.DesktopRuntime.6 -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.DesktopRuntime.7 -e -h --scope "machine" ; winget install --id=Microsoft.dotnetRuntime.3-x64 -e -h --scope "machine" ; winget install --id=Microsoft.dotnetRuntime.3-x86 -e -h --scope "machine" ; winget install --id=Microsoft.dotnetRuntime.6-x86 -e -h --scope "machine" ; winget install --id=Microsoft.dotnetRuntime.6-x64 -e -h --scope "machine" ; winget install --id=Microsoft.dotnetRuntime.5-x86 -e -h --scope "machine" ; winget install --id=Microsoft.dotnetRuntime.5-x64 -e -h --scope "machine" ; winget install --id=Microsoft.DirectX -e -h --scope "machine" ; winget install --id=JetBrains.PyCharm.Community -e -h --scope "machine" ; winget install --id=Google.AndroidStudio -e -h --scope "machine" ; winget install --id=HandBrake.HandBrake -e -h --scope "machine" ; winget install --id=BleachBit.BleachBit -e -h --scope "machine" ; winget install --id=FinalWire.AIDA64.Extreme -e -h --scope "machine" ; winget install --id=XavierRoche.HTTrack -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.Runtime.3_1 -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.Runtime.6 -e -h --scope "machine" ; winget install --id=Microsoft.DotNet.Runtime.7 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2005.x86 -e -h --scope "machine" ; winget install --id=AntiMicro.AntiMicro -e -h --scope "machine" ; winget install --id=Mojang.MinecraftLauncher -e -h --scope "machine" ; winget install --id=JohnMacFarlane.Pandoc -e -h --scope "machine" ; winget install --id=Peppy.Osu! -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2008.x86 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2010.x86 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2012.x86 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2013.x86 -e -h --scope "machine" ; winget install --id=Microsoft.VCRedist.2015+.x86 -e -h --scope "machine" ; winget install --id=MSYS2.MSYS2 -e -h --scope "machine" ; winget install --id=PrestonN.FreeTube -e -h --scope "machine" ; winget install --id=JGraph.Draw -e -h --scope "machine" ; winget install --id=WiresharkFoundation.Wireshark -e -h --scope "machine" ; winget install --id= Google.PlayGames.Beta -e -h --scope "machine" ; winget install --id=RiotGames.Valorant.NA -e -h --scope "machine" ; winget install --id=RiotGames.LeagueOfLegends.NA -e -h --scope "machine" ; winget install --id=XSplit.Broadcaster -e -h --scope "machine" ; winget install --id=JRSoftware.InnoSetup -e -h --scope "machine" ; winget install --id=kymoto.InnoScriptStudio -e -h --scope "machine" ; winget install --id=CodecGuide.K-LiteCodecPack.Mega -e -h --scope "machine" ; winget install --id=NSIS.NSIS -e -h --scope "machine" ; winget install --id=Guilded.Guilded -e -h --scope "machine" ; winget install --id=XnSoft.XnViewMP -e -h --scope "machine" ; winget install --id=Aegisub.Aegisub -e -h --scope "machine" ; winget install --id=syndicode.iNFektNFOViewer -e -h --scope "machine" ; winget install --id=egoist.devdocs-desktop -e -h  --scope "machine" ; winget install --id=namazso.OpenHashTab -e -h --scope "machine" ; winget install --id=LMMS.LMMS -e -h --scope "machine" ; winget install --id=OlegShparber.Zeal -e -h --scope "machine" ; winget install --id=Streamlink.Streamlink.TwitchGui -e -h --scope "machine" ; winget install --id=Streamlink.Streamlink -e -h --scope "machine" ; winget install --id=Elgato.StreamDeck -e -h --scope "machine" ; winget install --id=Streamlabs.Streamlabs -e -h --scope "machine" ; winget install --id=Twitch.TwitchStudio -e -h --scope "machine" ; winget install --id=Unigine.SuperpositionBenchmark -e -h --scope "machine" ; winget install --id=Unigine.ValleyBenchmark -e -h --scope "machine" ; winget install --id=Unigine.HeavenBenchmark -e -h --scope "machine" ; winget install --id=MSI.Kombustor.4 -e -h --scope "machine" ; winget install --id=Belarc.Advisor -e -h --scope "machine" ; winget install --id=Starship.Starship -e -h --scope "machine" ; winget install --id=darktable.darktable -e -h --scope "machine" ; winget install --id=OliverBetz.ExifTool -e -h --scope "machine" ; winget install --id=Redisant.TinyGUI -e -h --scope "machine" ; winget install --id=jbreland.uniextract -e -h --scope "machine" ; winget install --id=9NBLGGH5R558 -e -h --scope "machine" ; winget install --id=hellofficiency-inc.raven-reader -e -h --scope "machine" ; winget install --id=Audacious.MediaPlayer -e -h --scope "machine" ; winget install --id=SergeySerkov.TagScanner -e -h --scope "machine" ; winget install --id=WeMod.WeMod -e -h --scope "machine" ; winget install --id=HexChat.HexChat -e -h --scope "machine" ; winget install --id=mb21.panwriter -e -h --scope "machine" ; winget install --id=Cppcheck.Cppcheck -e -h --scope "machine" ; winget install --id=Oracle.JavaRuntimeEnvironment -e -h --scope "machine" ; winget install --id=Rufus.Rufus -e -h --scope "machine" ; winget install --id=RaspberryPiFoundation.RaspberryPiImager -e -h --scope "machine" ; winget install --id=OnionShare.OnionShare -e -h --scope "machine" ; winget install --id=GDevelop.GDevelop -e -h --scope "machine" ; winget install --id=ZeusSoftware.nGlide -e -h --scope "machine" ; winget install --id=inMerge.WinMerge -e -h --scope "machine" ; winget install --id=Antutu.AntutuBenchmark -e -h --scope "machine" ; winget install --id=AMD.OCAT -e -h --scope "machine" ; winget install --id=gpodder.gpodder -e -h --scope "machine" ; 
+# Web browsers
+winget install --id=Microsoft.Edge ;
+winget install --id=Mozilla.Firefox ;
+winget install --id=Brave.Brave ;
+winget install --id=TorProject.TorBrowser ;
+
+# Downloads
+winget install --id=qBittorrent.qBittorrent ;
+winget install --id=OnionShare.OnionShare ;
+winget install --id=XavierRoche.HTTrack ;
+
+# Media playback
+winget install --id=VideoLAN.VLC ;
+winget install --id=Audacious.MediaPlayer ;
+winget install --id=CodecGuide.K-LiteCodecPack.Mega ;
+winget install --id=gpodder.gpodder ;
+
+# 3D software
+winget install --id=BlenderFoundation.Blender ;
+
+# Audio/video transcoding and manipulation
+winget install --id=Audacity.Audacity ;
+winget install --id=Tenpi.Waifu2xGUI ;
+winget install --id=HandBrake.HandBrake ;
+winget install --id=LMMS.LMMS ;
+winget install --id=SergeySerkov.TagScanner ;
+winget install --id=Aegisub.Aegisub ;
+
+# Image and photo manipulation
+winget install --id=GIMP.GIMP ;
+winget install --id=Inkscape.Inkscape ;
+winget install --id=darktable.darktable ;
+winget install --id=XnSoft.XnViewMP ;
+
+# Office software
+winget install --id=calibre.calibre ;
+winget install --id=SumatraPDF.SumatraPDF ;
+winget install --id=TheDocumentFoundation.LibreOffice ;
+winget install --id=JohnMacFarlane.Pandoc ;
+winget install --id=mb21.panwriter ;
+winget install --id=JGraph.Draw ;
+
+# Social media and communication
+winget install --id=Discord.Discord ;
+winget install --id=Mozilla.Thunderbird ;
+winget install --id=Guilded.Guilded ;
+winget install --id=hellofficiency-inc.raven-reader ;
+winget install --id=HexChat.HexChat ;
+
+# Alternate frontends
+winget install --id=PrestonN.FreeTube ;
+winget install --id=Streamlink.Streamlink ;
+winget install --id=Streamlink.Streamlink.TwitchGui ;
+
+# Streaming and content creation
+winget install --id=OBSProject.OBSStudio ;
+winget install --id=Streamlabs.Streamlabs ;
+winget install --id=XSplit.Broadcaster ;
+winget install --id=Twitch.TwitchStudio ;
+winget install --id=Elgato.StreamDeck ;
+
+# Game clients
+winget install --id=Valve.Steam ;
+winget install --id=EpicGames.EpicGamesLauncher ;
+winget install --id=GOG.Galaxy ;
+winget install --id=ItchIo.Itch ;
+winget install --id=Ubisoft.Connect ;
+winget install --id=ElectronicArts.EADesktop ;
+winget install --id=Amazon.Games ;
+winget install --id=Mojang.MinecraftLauncher ;
+winget install --id=Peppy.Osu! ;
+winget install --id=Google.PlayGames.Beta ;
+winget install --id=RiotGames.Valorant.NA ;
+winget install --id=RiotGames.LeagueOfLegends.NA ;
+
+# Gaming utilities
+winget install --id=Codeusa.BorderlessGaming ;
+winget install --id=NexusMods.Vortex ;
+winget install --id=AntiMicro.AntiMicro ;
+winget install --id=WeMod.WeMod ;
+winget install --id=ZeusSoftware.nGlide ;
+
+# System runtimes
+winget install --id=Microsoft.VCRedist.2005.x64 ;
+winget install --id=Microsoft.VCRedist.2008.x64 ;
+winget install --id=Microsoft.VCRedist.2010.x64 ;
+winget install --id=Microsoft.VCRedist.2012.x64 ;
+winget install --id=Microsoft.VCRedist.2013.x64 ;
+winget install --id=Microsoft.VCRedist.2005.x86 ;
+winget install --id=Microsoft.VCRedist.2008.x86 ;
+winget install --id=Microsoft.VCRedist.2010.x86 ;
+winget install --id=Microsoft.VCRedist.2012.x86 ;
+winget install --id=Microsoft.VCRedist.2013.x86 ;
+winget install --id=Microsoft.VCRedist.2015+.x86 ;
+winget install --id=Microsoft.VCRedist.2015+.x64 ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.3_1 ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.5 ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.6 ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.7 ;
+winget install --id=Microsoft.DotNet.Runtime.3_1 ;
+winget install --id=Microsoft.DotNet.Runtime.5 ;
+winget install --id=Microsoft.DotNet.Runtime.6 ;
+winget install --id=Microsoft.DotNet.Runtime.7 ;
+winget install --id=Microsoft.DotNet.Framework.DeveloperPack_4 ;
+winget install --id=Microsoft.DirectX ;
+winget install --id=Oracle.JavaRuntimeEnvironment ;
+
+# System information
+winget install --id=CPUID.CPU-Z ;
+winget install --id=TechPowerUp.GPU-Z ;
+winget install --id=CPUID.HWMonitor ;
+winget install --id=CrystalDewWorld.CrystalDiskInfo ;
+winget install --id=AntibodySoftware.WizTree ;
+winget install --id=REALiX.HWiNFO ;
+winget install --id=PassMark.DiskCheckup ;
+winget install --id=AMD.OCAT ;
+
+# System benchmarks
+winget install --id=PrimateLabs.Geekbench.6 ;
+winget install --id=CrystalDewWorld.CrystalDiskMark ;
+winget install --id=Antutu.AntutuBenchmark ;
+winget install --id=Unigine.SuperpositionBenchmark ;
+winget install --id=Unigine.ValleyBenchmark ;
+winget install --id=Unigine.HeavenBenchmark ;
+winget install --id=MSI.Kombustor.4 ;
+winget install --id=FinalWire.AIDA64.Extreme ;
+
+# System utilities
+winget install --id=voidtools.Everything ;
+winget install --id=ShareX.ShareX ;
+winget install --id=File-New-Project.EarTrumpet ;
+winget install --id=7zip.7zip ;
+winget install --id=Microsoft.PowerToys ;
+winget install --id=DuongDieuPhap.ImageGlass ;
+winget install --id=namazso.OpenHashTab ;
+winget install --id=WinMerge.WinMerge ;
+winget install --id=WinSCP.WinSCP ;
+winget install --id=syndicode.iNFektNFOViewer ;
+winget install --id=9NBLGGH5R558 ; # Microsoft To Do
+
+# Imaging utilities
+winget install --id=LIGHTNINGUK.ImgBurn ;
+winget install --id=Rufus.Rufus ;
+winget install --id=RaspberryPiFoundation.RaspberryPiImager ;
+
+# Network utilities
+winget install --id=Insecure.Nmap ;
+winget install --id=angryziber.AngryIPScanner ;
+winget install --id=WiresharkFoundation.Wireshark ;
+
+# Security
+winget install --id=Bitwarden.Bitwarden ;
+winget install --id=Malwarebytes.Malwarebytes ;
+
+# Disk cleanup and metadata removal
+winget install --id=BleachBit.BleachBit ;
+winget install --id=szTheory.exifcleaner ;
+
+# Text editors and IDEs
+winget install --id=Notepad++.Notepad++ ;
+winget install --id=Microsoft.VisualStudioCode ;
+winget install --id=JetBrains.PyCharm.Community ;
+winget install --id=Google.AndroidStudio ;
+
+# Project management
+winget install --id=Notion.Notion ;
+
+# Compilers
+winget install --id=MSYS2.MSYS2 ;
+
+# Interpreters
+winget install --id=OpenJS.NodeJS ;
+winget install --id=Python.Python.3.11 ;
+
+# Source control
+winget install --id=Git.Git ;
+winget install --id=GitHub.GitHubDesktop ;
+
+# Development of installers
+winget install --id=JRSoftware.InnoSetup ;
+winget install --id=kymoto.InnoScriptStudio ;
+winget install --id=NSIS.NSIS ;
+
+# Static analysis tools
+winget install --id=Cppcheck.Cppcheck ;
+
+# Game development
+winget install --id=GDevelop.GDevelop ;
+
+# Documentation
+winget install --id=egoist.devdocs-desktop ;
+winget install --id=OlegShparber.Zeal ;
+
+# Reverse-engineering
+winget install --id=dnSpyEx.dnSpy ;
+winget install --id=icsharpcode.ILSpy ;
+
+# TODO:
+# Spotify is a special case where you can't install via a PowerShell instance with administrative privileges,
+# so need to open a non-admin PowerShell prompt for this app specifically. ( ˘︹˘ )
+#powershell winget install --id=Spotify.Spotify ;
+winget install --id=Spotify.Spotify ;
