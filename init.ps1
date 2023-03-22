@@ -54,6 +54,9 @@ Install-WindowsUpdate -AcceptAll
 # To exclude certain updates, enter all relevant KB article IDs
 # Hide-WindowsUpdate -KBArticleID KB
 
+# Apply custom PowerShell profile
+Copy-Item -Path .\powershell\Microsoft.PowerShell_profile.ps1 -Destination C:\Users\Turtle\Documents\WindowsPowerShell
+
 # Install Winfetch
 Install-Script winfetch
 
@@ -61,8 +64,11 @@ Install-Script winfetch
 Copy-Item -Path .\winfetch\config.ps1 -Destination C:\Users\Turtle\.config\winfetch
 Copy-Item -Path .\winfetch\winfetch.png -Destination C:\Users\Turtle\.config\winfetch
 
-# TODO: Apply customization as well
+# Install Starship prompt
 winget install --id=Starship.Starship ;
+
+# Apply custom Starship config
+Copy-Item -Path .\starship\starship.toml -Destination C:\Users\Turtle\.config\
 
 # Install Windows "ultimate power plan"...WARNING: DO NOT run this on a laptop, comment it out!
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
