@@ -291,6 +291,7 @@ winget install --id=OlegShparber.Zeal ;
 # Reverse-engineering
 winget install --id=dnSpyEx.dnSpy ;
 winget install --id=icsharpcode.ILSpy ;
+winget install --id=WerWolv.ImHex ;
 
 # TODO:
 # Spotify is a special case where you can't install via a PowerShell instance with administrative privileges,
