@@ -248,6 +248,7 @@ winget install --id=WiresharkFoundation.Wireshark ;
 # Security
 winget install --id=Bitwarden.Bitwarden ;
 winget install --id=Malwarebytes.Malwarebytes ;
+winget install --id=Safing.Portmaster ;
 
 # Disk cleanup and metadata removal
 winget install --id=BleachBit.BleachBit ;
