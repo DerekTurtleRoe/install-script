@@ -105,6 +105,7 @@ winget install --id=TorProject.TorBrowser ;
 winget install --id=qBittorrent.qBittorrent ;
 winget install --id=OnionShare.OnionShare ;
 winget install --id=XavierRoche.HTTrack ;
+winget install --id yt-dlg.yt-dlg
 
 # Media playback
 winget install --id=VideoLAN.VLC ;
