@@ -1,29 +1,37 @@
+# This is a PowerShell script to install and setup my Windows workstation
+# Made by Derek "Turtle" Roe
+# Licensed under the GNU GPLv3 or later
+
 Write-Host
 "
-//    _______         _   _             _____           _        _ _    _____           _       _      
-//   |__   __|       | | | |           |_   _|         | |      | | |  / ____|         (_)     | |     
-//      | |_   _ _ __| |_| | ___  ___    | |  _ __  ___| |_ __ _| | | | (___   ___ _ __ _ _ __ | |_    
-//      | | | | | '__| __| |/ _ \/ __|   | | | '_ \/ __| __/ _` | | |  \___ \ / __| '__| | '_ \| __|   
-//      | | |_| | |  | |_| |  __/\__ \  _| |_| | | \__ \ || (_| | | |  ____) | (__| |  | | |_) | |_    
-//      |_|\__,_|_|   \__|_|\___||___/ |_____|_| |_|___/\__\__,_|_|_| |_____/ \___|_|  |_| .__/ \__|   
-//     _____ _   _ _    _    _____ _____  _         ____                                 | |           
-//    / ____| \ | | |  | |  / ____|  __ \| |       |___ \                                |_|           
-//   | |  __|  \| | |  | | | |  __| |__) | |  __   ____) |                                             
-//   | | |_ | . ` | |  | | | | |_ |  ___/| |  \ \ / /__ <                                              
-//   | |__| | |\  | |__| | | |__| | |    | |___\ V /___) |                                             
-//    \_____|_| \_|\____/   \_____|_|    |______\_/|____/                                              
-//   __          __   _ _   _               _         _____                       _____ _          _ _ 
-//   \ \        / /  (_) | | |             (_)       |  __ \                     / ____| |        | | |
-//    \ \  /\  / / __ _| |_| |_ ___ _ __    _ _ __   | |__) |____      _____ _ _| (___ | |__   ___| | |
-//     \ \/  \/ / '__| | __| __/ _ \ '_ \  | | '_ \  |  ___/ _ \ \ /\ / / _ \ '__\___ \| '_ \ / _ \ | |
-//      \  /\  /| |  | | |_| ||  __/ | | | | | | | | | |  | (_) \ V  V /  __/ |  ____) | | | |  __/ | |
-//       \/  \/ |_|  |_|\__|\__\___|_| |_| |_|_| |_| |_|   \___/ \_/\_/ \___|_| |_____/|_| |_|\___|_|_|
-//                                                                                                     
+████████╗██╗   ██╗██████╗ ████████╗██╗     ███████╗███████╗    ██╗    ██╗██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗███████╗    ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗
+╚══██╔══╝██║   ██║██╔══██╗╚══██╔══╝██║     ██╔════╝██╔════╝    ██║    ██║██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║██╔════╝    ██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝
+   ██║   ██║   ██║██████╔╝   ██║   ██║     █████╗  ███████╗    ██║ █╗ ██║██║██╔██╗ ██║██║  ██║██║   ██║██║ █╗ ██║███████╗    ███████╗██║     ██████╔╝██║██████╔╝   ██║   
+   ██║   ██║   ██║██╔══██╗   ██║   ██║     ██╔══╝  ╚════██║    ██║███╗██║██║██║╚██╗██║██║  ██║██║   ██║██║███╗██║╚════██║    ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   
+   ██║   ╚██████╔╝██║  ██║   ██║   ███████╗███████╗███████║    ╚███╔███╔╝██║██║ ╚████║██████╔╝╚██████╔╝╚███╔███╔╝███████║    ███████║╚██████╗██║  ██║██║██║        ██║   
+   ╚═╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚══════╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   
+                                                                                                                                                                         
+ ██████╗ ███╗   ██╗██╗   ██╗     ██████╗ ██████╗ ██╗    ██╗   ██╗██████╗                                                                                                 
+██╔════╝ ████╗  ██║██║   ██║    ██╔════╝ ██╔══██╗██║    ██║   ██║╚════██╗                                                                                                
+██║  ███╗██╔██╗ ██║██║   ██║    ██║  ███╗██████╔╝██║    ██║   ██║ █████╔╝                                                                                                
+██║   ██║██║╚██╗██║██║   ██║    ██║   ██║██╔═══╝ ██║    ╚██╗ ██╔╝ ╚═══██╗                                                                                                
+╚██████╔╝██║ ╚████║╚██████╔╝    ╚██████╔╝██║     ███████╗╚████╔╝ ██████╔╝                                                                                                
+ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝      ╚═════╝ ╚═╝     ╚══════╝ ╚═══╝  ╚═════╝                                                                                                 
+                                                                                                                                                                         
+██╗    ██╗██████╗ ██╗████████╗████████╗███████╗███╗   ██╗    ██╗███╗   ██╗    ██████╗  ██████╗ ██╗    ██╗███████╗██████╗ ███████╗██╗  ██╗███████╗██╗     ██╗             
+██║    ██║██╔══██╗██║╚══██╔══╝╚══██╔══╝██╔════╝████╗  ██║    ██║████╗  ██║    ██╔══██╗██╔═══██╗██║    ██║██╔════╝██╔══██╗██╔════╝██║  ██║██╔════╝██║     ██║             
+██║ █╗ ██║██████╔╝██║   ██║      ██║   █████╗  ██╔██╗ ██║    ██║██╔██╗ ██║    ██████╔╝██║   ██║██║ █╗ ██║█████╗  ██████╔╝███████╗███████║█████╗  ██║     ██║             
+██║███╗██║██╔══██╗██║   ██║      ██║   ██╔══╝  ██║╚██╗██║    ██║██║╚██╗██║    ██╔═══╝ ██║   ██║██║███╗██║██╔══╝  ██╔══██╗╚════██║██╔══██║██╔══╝  ██║     ██║             
+╚███╔███╔╝██║  ██║██║   ██║      ██║   ███████╗██║ ╚████║    ██║██║ ╚████║    ██║     ╚██████╔╝╚███╔███╔╝███████╗██║  ██║███████║██║  ██║███████╗███████╗███████╗        
+ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═══╝    ╚═╝╚═╝  ╚═══╝    ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝        
+                                                                                                                                                                         
 "
 
 #===========================================================================
 # Install script start
 #===========================================================================
+
+# Be sure to run this script as an administrator to avoid issues!
 
 # Update the help files for PowerShell functions
 Update-Help
@@ -32,12 +40,16 @@ Update-Help
 # PLEASE NOTE: THIS IS INSECURE, PLEASE USE CAUTION/COMMON SENSE WHEN DOING THIS!!!
 # Normal users will want to just run the script using the right click option "Run with PowerShell", 
 # as this gives permission once and then blocks scripts after that
-Set-ExecutionPolicy unrestricted
+# Set-ExecutionPolicy Unrestricted -Scope LocalMachine
+# Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
 # Install winget, thanks to Chris Titus for this little script!
 Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 	Install-Script -Name winget-install -Force
 	winget-install.ps1
+
+# Install Chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 # Add PowerShell scripts directory to the PATH
 Set-PathVariable AddPath 'C:\Program Files\WindowsPowerShell\Scripts'
@@ -93,210 +105,209 @@ foreach ($ttfFile in $ttfFiles) {
 # Output a message indicating that the files have been copied
 Write-Output "All .ttf files in $sourceFolder have been copied to $destinationFolder"
 
+# Add this folder to the PATH for CLI apps that will be installed
+Set-PathVariable AddPath 'C:\cli'
+
 # Install all of the things! O_O
 
+# TODO
+# Log things with
+# if($LASTEXITCODE){"App successfully installed!"}
+
+# TODO
+# Maybe make an import JSON and then
+# winget import -i .\winget-export.json --accept-package-agreements
+
 # Web browsers
-winget install --id=Microsoft.Edge ;
-winget install --id=Mozilla.Firefox ;
-winget install --id=Brave.Brave ;
-winget install --id=TorProject.TorBrowser ;
+winget install --id=Alex313031.Thorium -h ;
+winget install --id=Alex313031.Mercury -h ;
+winget install --id=TorProject.TorBrowser -h -l "C:\TorBrowser" ;
 
 # Downloads
-winget install --id=qBittorrent.qBittorrent ;
-winget install --id=OnionShare.OnionShare ;
-winget install --id=XavierRoche.HTTrack ;
-winget install --id yt-dlg.yt-dlg
+winget install --id=qBittorrent.qBittorrent -h ;
+winget install --id=OnionShare.OnionShare -h ;
+winget install --id=XavierRoche.HTTrack -h ;
+winget install --id=yt-Stacher.youtube-dl -h ;
 
 # Media playback
-winget install --id=VideoLAN.VLC ;
-winget install --id=Audacious.MediaPlayer ;
-winget install --id=CodecGuide.K-LiteCodecPack.Mega ;
-winget install --id=gpodder.gpodder ;
+winget install --id=VideoLAN.VLC -h ;
+winget install --id=Audacious.MediaPlayer -h ;
+winget install --id=CodecGuide.K-LiteCodecPack.Mega -h ;
+winget install --id=gpodder.gpodder -h ;
 
 # 3D software
-winget install --id=BlenderFoundation.Blender ;
+winget install --id=BlenderFoundation.Blender -h ;
 
 # Audio/video transcoding and manipulation
-winget install --id=Audacity.Audacity ;
-winget install --id=Tenpi.Waifu2xGUI ;
-winget install --id=HandBrake.HandBrake ;
-winget install --id=LMMS.LMMS ;
-winget install --id=SergeySerkov.TagScanner ;
-winget install --id=Aegisub.Aegisub ;
+winget install --id=Audacity.Audacity -h ;
+winget install --id=Tenpi.Waifu2xGUI -h ;
+winget install --id=HandBrake.HandBrake -h ;
+winget install --id=LMMS.LMMS -h ;
+winget install --id=SergeySerkov.TagScanner -h ;
+winget install --id=Aegisub.Aegisub -h ;
 
 # Image and photo manipulation
-winget install --id=GIMP.GIMP ;
-winget install --id=Inkscape.Inkscape ;
-winget install --id=darktable.darktable ;
-winget install --id=XnSoft.XnViewMP ;
+winget install --id=GIMP.GIMP -h ;
+winget install --id=Inkscape.Inkscape -h ;
+winget install --id=darktable.darktable -h ;
+winget install --id=XnSoft.XnViewMP -h ;
 
 # Office software
-winget install --id=calibre.calibre ;
-winget install --id=SumatraPDF.SumatraPDF ;
-winget install --id=TheDocumentFoundation.LibreOffice ;
-winget install --id=JohnMacFarlane.Pandoc ;
-winget install --id=mb21.panwriter ;
-winget install --id=JGraph.Draw ;
+winget install --id=calibre.calibre -h ;
+winget install --id=SumatraPDF.SumatraPDF -h ;
+winget install --id=TheDocumentFoundation.LibreOffice -h ;
+winget install --id=JohnMacFarlane.Pandoc -h ;
+winget install --id=mb21.panwriter -h ;
 
 # Social media and communication
-winget install --id=Discord.Discord ;
-winget install --id=Mozilla.Thunderbird ;
-winget install --id=Guilded.Guilded ;
-winget install --id=hellofficiency-inc.raven-reader ;
-winget install --id=HexChat.HexChat ;
+winget install --id=Discord.Discord -h ;
+winget install --id=Mozilla.Thunderbird -h ;
+winget install --id=Guilded.Guilded -h ;
+winget install --id=hellofficiency-inc.raven-reader -h ;
+winget install --id=HexChat.HexChat -h ;
 
 # Alternate frontends
-winget install --id=PrestonN.FreeTube ;
-winget install --id=Streamlink.Streamlink ;
-winget install --id=Streamlink.Streamlink.TwitchGui ;
+winget install --id=PrestonN.FreeTube -h ;
+winget install --id=Streamlink.Streamlink -h ;
+winget install --id=Streamlink.Streamlink.TwitchGui -h ;
 
 # Streaming and content creation
-winget install --id=OBSProject.OBSStudio ;
-winget install --id=Streamlabs.Streamlabs ;
-winget install --id=XSplit.Broadcaster ;
-winget install --id=Twitch.TwitchStudio ;
-winget install --id=Elgato.StreamDeck ;
+winget install --id=OBSProject.OBSStudio -h ;
+winget install --id=Streamlabs.Streamlabs -h ;
+winget install --id=XSplit.Broadcaster -h ;
+winget install --id=Twitch.TwitchStudio -h ;
+winget install --id=Elgato.StreamDeck -h ;
 
 # Game clients
-winget install --id=Valve.Steam ;
-winget install --id=EpicGames.EpicGamesLauncher ;
-winget install --id=GOG.Galaxy ;
-winget install --id=ItchIo.Itch ;
-winget install --id=Ubisoft.Connect ;
-winget install --id=ElectronicArts.EADesktop ;
-winget install --id=Amazon.Games ;
-winget install --id=Mojang.MinecraftLauncher ;
-winget install --id=Peppy.Osu! ;
-winget install --id=Google.PlayGames.Beta ;
-winget install --id=RiotGames.Valorant.NA ;
-winget install --id=RiotGames.LeagueOfLegends.NA ;
+winget install --id=Valve.Steam -h ;
+winget install --id=EpicGames.EpicGamesLauncher -h ;
+winget install --id=GOG.Galaxy -h ;
+winget install --id=ItchIo.Itch -h ;
+winget install --id=Ubisoft.Connect -h ;
+winget install --id=ElectronicArts.EADesktop -h ;
+winget install --id=Mojang.MinecraftLauncher -h ;
+winget install --id=Peppy.Osu! -h ;
+winget install --id=Google.PlayGames.Beta -h ;
+winget install --id=RiotGames.Valorant.NA -h ;
+winget install --id=RiotGames.LeagueOfLegends.NA -h ;
 
 # Gaming utilities
-winget install --id=Codeusa.BorderlessGaming ;
-winget install --id=NexusMods.Vortex ;
-winget install --id=AntiMicro.AntiMicro ;
-winget install --id=WeMod.WeMod ;
-winget install --id=ZeusSoftware.nGlide ;
+winget install --id=Codeusa.BorderlessGaming -h ;
+winget install --id=NexusMods.Vortex -h ;
+winget install --id=AntiMicroX.antimicrox -h ;
+winget install --id=WeMod.WeMod -h ;
+winget install --id=ZeusSoftware.nGlide -h ;
 
 # System runtimes
-winget install --id=Microsoft.VCRedist.2005.x64 ;
-winget install --id=Microsoft.VCRedist.2008.x64 ;
-winget install --id=Microsoft.VCRedist.2010.x64 ;
-winget install --id=Microsoft.VCRedist.2012.x64 ;
-winget install --id=Microsoft.VCRedist.2013.x64 ;
-winget install --id=Microsoft.VCRedist.2005.x86 ;
-winget install --id=Microsoft.VCRedist.2008.x86 ;
-winget install --id=Microsoft.VCRedist.2010.x86 ;
-winget install --id=Microsoft.VCRedist.2012.x86 ;
-winget install --id=Microsoft.VCRedist.2013.x86 ;
-winget install --id=Microsoft.VCRedist.2015+.x86 ;
-winget install --id=Microsoft.VCRedist.2015+.x64 ;
-winget install --id=Microsoft.DotNet.DesktopRuntime.3_1 ;
-winget install --id=Microsoft.DotNet.DesktopRuntime.5 ;
-winget install --id=Microsoft.DotNet.DesktopRuntime.6 ;
-winget install --id=Microsoft.DotNet.DesktopRuntime.7 ;
-winget install --id=Microsoft.DotNet.Runtime.3_1 ;
-winget install --id=Microsoft.DotNet.Runtime.5 ;
-winget install --id=Microsoft.DotNet.Runtime.6 ;
-winget install --id=Microsoft.DotNet.Runtime.7 ;
-winget install --id=Microsoft.DotNet.Framework.DeveloperPack_4 ;
-winget install --id=Microsoft.DirectX ;
-winget install --id=Oracle.JavaRuntimeEnvironment ;
+winget install --id=Microsoft.VCRedist.2005.x64 -h ;
+winget install --id=Microsoft.VCRedist.2008.x64 -h ;
+winget install --id=Microsoft.VCRedist.2010.x64 -h ;
+winget install --id=Microsoft.VCRedist.2012.x64 -h ;
+winget install --id=Microsoft.VCRedist.2013.x64 -h ;
+winget install --id=Microsoft.VCRedist.2005.x86 -h ;
+winget install --id=Microsoft.VCRedist.2008.x86 -h ;
+winget install --id=Microsoft.VCRedist.2010.x86 -h ;
+winget install --id=Microsoft.VCRedist.2012.x86 -h ;
+winget install --id=Microsoft.VCRedist.2013.x86 -h ;
+winget install --id=Microsoft.VCRedist.2015+.x86 -h ;
+winget install --id=Microsoft.VCRedist.2015+.x64 -h ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.3_1 -h ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.5 -h ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.6 -h ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.7 -h ;
+winget install --id=Microsoft.DotNet.Runtime.3_1 -h ;
+winget install --id=Microsoft.DotNet.Runtime.5 -h ;
+winget install --id=Microsoft.DotNet.Runtime.6 -h ;
+winget install --id=Microsoft.DotNet.Runtime.7 -h ;
+winget install --id=Microsoft.DotNet.Framework.DeveloperPack_4 -h ;
+winget install --id=Microsoft.DirectX -h ;
+winget install --id=Oracle.JavaRuntimeEnvironment -h ;
 
 # System information
-winget install --id=CPUID.CPU-Z ;
-winget install --id=TechPowerUp.GPU-Z ;
-winget install --id=CPUID.HWMonitor ;
-winget install --id=CrystalDewWorld.CrystalDiskInfo ;
-winget install --id=AntibodySoftware.WizTree ;
-winget install --id=REALiX.HWiNFO ;
-winget install --id=PassMark.DiskCheckup ;
-winget install --id=AMD.OCAT ;
+winget install --id=CPUID.CPU-Z -h ;
+winget install --id=TechPowerUp.GPU-Z -h ;
+winget install --id=CPUID.HWMonitor -h ;
+winget install --id=CrystalDewWorld.CrystalDiskInfo -h ;
+winget install --id=AntibodySoftware.WizTree -h ;
+winget install --id=REALiX.HWiNFO -h ;
+winget install --id=AMD.OCAT -h ;
 
 # System benchmarks
-winget install --id=PrimateLabs.Geekbench.6 ;
-winget install --id=CrystalDewWorld.CrystalDiskMark ;
-winget install --id=Antutu.AntutuBenchmark ;
-winget install --id=Unigine.SuperpositionBenchmark ;
-winget install --id=Unigine.ValleyBenchmark ;
-winget install --id=Unigine.HeavenBenchmark ;
-winget install --id=MSI.Kombustor.4 ;
-winget install --id=FinalWire.AIDA64.Extreme ;
+winget install --id=PrimateLabs.Geekbench.6 -h ;
+winget install --id=CrystalDewWorld.CrystalDiskMark -h ;
+winget install --id=Antutu.AntutuBenchmark -h ;
+winget install --id=Unigine.SuperpositionBenchmark -h ;
+winget install --id=Unigine.ValleyBenchmark -h ;
+winget install --id=Unigine.HeavenBenchmark -h ;
+winget install --id=MSI.Kombustor.4 -h ;
+winget install --id=FinalWire.AIDA64.Extreme -h ;
+winget install --id=CrystalDewWorld.CrystalDiskMark -h ;
 
 # System utilities
-winget install --id=voidtools.Everything ;
-winget install --id=ShareX.ShareX ;
-winget install --id=File-New-Project.EarTrumpet ;
-winget install --id=7zip.7zip ;
-winget install --id=Microsoft.PowerToys ;
-winget install --id=DuongDieuPhap.ImageGlass ;
-winget install --id=namazso.OpenHashTab ;
-winget install --id=WinMerge.WinMerge ;
-winget install --id=WinSCP.WinSCP ;
-winget install --id=syndicode.iNFektNFOViewer ;
-winget install --id=9NBLGGH5R558 ; # Microsoft To Do
+winget install --id=voidtools.Everything -h ;
+winget install --id=ShareX.ShareX -h ;
+winget install --id=File-New-Project.EarTrumpet -h ;
+winget install --id=7zip.7zip -h ;
+winget install --id=Microsoft.PowerToys -h ;
+winget install --id=DuongDieuPhap.ImageGlass -h ;
+winget install --id=namazso.OpenHashTab -h ;
+winget install --id=WinMerge.WinMerge -h ;
+winget install --id=WinSCP.WinSCP -h ;
+winget install --id=syndicode.iNFektNFOViewer -h ;
+winget install --id=9NBLGGH5R558 -h ; # Microsoft To Do
+winget install --id=9p7knl5rwt25 --accept-package-agreements -h -l "C:\Sysinternals" ;
 
 # Imaging utilities
-winget install --id=LIGHTNINGUK.ImgBurn ;
-winget install --id=Rufus.Rufus ;
-winget install --id=RaspberryPiFoundation.RaspberryPiImager ;
+winget install --id=LIGHTNINGUK.ImgBurn -h ;
+winget install --id=Rufus.Rufus -h ;
 
 # Network utilities
-winget install --id=Insecure.Nmap ;
-winget install --id=angryziber.AngryIPScanner ;
-winget install --id=WiresharkFoundation.Wireshark ;
+winget install --id=Insecure.Nmap -h ;
+winget install --id=angryziber.AngryIPScanner -h ;
+winget install --id=WiresharkFoundation.Wireshark -h ;
 
 # Security
-winget install --id=Bitwarden.Bitwarden ;
-winget install --id=Malwarebytes.Malwarebytes ;
-winget install --id=Safing.Portmaster ;
+winget install --id=Bitwarden.Bitwarden -h ;
+winget install --id=Safing.Portmaster -h ;
 
 # Disk cleanup and metadata removal
-winget install --id=BleachBit.BleachBit ;
-winget install --id=szTheory.exifcleaner ;
+winget install --id=BleachBit.BleachBit -h ;
+winget install --id=szTheory.exifcleaner -h ;
 
 # Text editors and IDEs
-winget install --id=Notepad++.Notepad++ ;
-winget install --id=Microsoft.VisualStudioCode ;
-winget install --id=JetBrains.PyCharm.Community ;
-winget install --id=Google.AndroidStudio ;
+winget install --id=Notepad++.Notepad++ -h ;
+winget install --id=Microsoft.VisualStudioCode -h ;
+choco install qownnotes
 
 # Project management
-winget install --id=Notion.Notion ;
+winget install --id=Notion.Notion -h ;
 
 # Compilers
-winget install --id=MSYS2.MSYS2 ;
+winget install --id=MSYS2.MSYS2 -h ;
 
 # Interpreters
-winget install --id=OpenJS.NodeJS ;
-winget install --id=Python.Python.3.11 ;
+winget install --id=OpenJS.NodeJS -h ;
+winget install --id=Python.Python.3.11 -h ;
 
 # Source control
-winget install --id=Git.Git ;
-winget install --id=GitHub.GitHubDesktop ;
+winget install --id=Git.Git -h ;
+winget install --id=GitHub.GitHubDesktop -h ;
 
 # Development of installers
-winget install --id=JRSoftware.InnoSetup ;
-winget install --id=kymoto.InnoScriptStudio ;
-winget install --id=NSIS.NSIS ;
+winget install --id=JRSoftware.InnoSetup -h ;
+winget install --id=kymoto.InnoScriptStudio -h ;
+winget install --id=NSIS.NSIS -h ;
 
 # Static analysis tools
-winget install --id=Cppcheck.Cppcheck ;
+winget install --id=Cppcheck.Cppcheck -h ;
 
 # Game development
-winget install --id=GDevelop.GDevelop ;
+winget install --id=GDevelop.GDevelop -h ;
 
 # Documentation
-winget install --id=egoist.devdocs-desktop ;
-winget install --id=OlegShparber.Zeal ;
+winget install --id=OlegShparber.Zeal -h ;
 
 # Reverse-engineering
-winget install --id=dnSpyEx.dnSpy ;
-winget install --id=icsharpcode.ILSpy ;
-winget install --id=WerWolv.ImHex ;
-
-# TODO:
-# Spotify is a special case where you can't install via a PowerShell instance with administrative privileges,
-# so need to open a non-admin PowerShell prompt for this app specifically. ( ˘︹˘ )
-#powershell winget install --id=Spotify.Spotify ;
-winget install --id=Spotify.Spotify ;
+winget install --id=dnSpyEx.dnSpy -h -l "C:\dnSpyEx" ;
+winget install --id=icsharpcode.ILSpy -h ;
+winget install --id=WerWolv.ImHex -h ;
