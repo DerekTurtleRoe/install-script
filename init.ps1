@@ -121,7 +121,7 @@ Set-PathVariable AddPath 'C:\cli'
 # Web browsers
 winget install --id=Brave.Brave -h ;
 winget install --id=Mozilla.Firefox -h ;
-winget install --id=Mullvad.Browser -h ;
+winget install --id=Mullvad.Browser -h -l "C:\MullvadBrowser" ;
 winget install --id=TorProject.TorBrowser -h -l "C:\TorBrowser" ;
 
 # Downloads
