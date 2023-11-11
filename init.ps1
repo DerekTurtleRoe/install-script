@@ -119,8 +119,9 @@ Set-PathVariable AddPath 'C:\cli'
 # winget import -i .\winget-export.json --accept-package-agreements
 
 # Web browsers
-winget install --id=Alex313031.Thorium -h ;
-winget install --id=Alex313031.Mercury -h ;
+winget install --id=Brave.Brave -h ;
+winget install --id=Mozilla.Firefox -h ;
+winget install --id=Mullvad.Browser -h ;
 winget install --id=TorProject.TorBrowser -h -l "C:\TorBrowser" ;
 
 # Downloads
