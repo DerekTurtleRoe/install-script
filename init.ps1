@@ -1,6 +1,6 @@
 # This is a PowerShell script to install and setup my Windows workstation
 # Made by Derek "Turtle" Roe
-# Licensed under the GNU GPLv3 or later
+# Licensed under the Unlicense
 
 Write-Host
 "
@@ -11,13 +11,13 @@ Write-Host
    ██║   ╚██████╔╝██║  ██║   ██║   ███████╗███████╗███████║    ╚███╔███╔╝██║██║ ╚████║██████╔╝╚██████╔╝╚███╔███╔╝███████║    ███████║╚██████╗██║  ██║██║██║        ██║   
    ╚═╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚══════╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   
                                                                                                                                                                          
- ██████╗ ███╗   ██╗██╗   ██╗     ██████╗ ██████╗ ██╗    ██╗   ██╗██████╗                                                                                                 
-██╔════╝ ████╗  ██║██║   ██║    ██╔════╝ ██╔══██╗██║    ██║   ██║╚════██╗                                                                                                
-██║  ███╗██╔██╗ ██║██║   ██║    ██║  ███╗██████╔╝██║    ██║   ██║ █████╔╝                                                                                                
-██║   ██║██║╚██╗██║██║   ██║    ██║   ██║██╔═══╝ ██║    ╚██╗ ██╔╝ ╚═══██╗                                                                                                
-╚██████╔╝██║ ╚████║╚██████╔╝    ╚██████╔╝██║     ███████╗╚████╔╝ ██████╔╝                                                                                                
- ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝      ╚═════╝ ╚═╝     ╚══════╝ ╚═══╝  ╚═════╝                                                                                                 
-                                                                                                                                                                         
+██╗   ██╗███╗   ██╗██╗     ██╗ ██████╗███████╗███╗   ██╗███████╗███████╗
+██║   ██║████╗  ██║██║     ██║██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
+██║   ██║██╔██╗ ██║██║     ██║██║     █████╗  ██╔██╗ ██║███████╗█████╗  
+██║   ██║██║╚██╗██║██║     ██║██║     ██╔══╝  ██║╚██╗██║╚════██║██╔══╝  
+╚██████╔╝██║ ╚████║███████╗██║╚██████╗███████╗██║ ╚████║███████║███████╗
+ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝ ╚═════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
+                                                                        
 ██╗    ██╗██████╗ ██╗████████╗████████╗███████╗███╗   ██╗    ██╗███╗   ██╗    ██████╗  ██████╗ ██╗    ██╗███████╗██████╗ ███████╗██╗  ██╗███████╗██╗     ██╗             
 ██║    ██║██╔══██╗██║╚══██╔══╝╚══██╔══╝██╔════╝████╗  ██║    ██║████╗  ██║    ██╔══██╗██╔═══██╗██║    ██║██╔════╝██╔══██╗██╔════╝██║  ██║██╔════╝██║     ██║             
 ██║ █╗ ██║██████╔╝██║   ██║      ██║   █████╗  ██╔██╗ ██║    ██║██╔██╗ ██║    ██████╔╝██║   ██║██║ █╗ ██║█████╗  ██████╔╝███████╗███████║█████╗  ██║     ██║             
@@ -82,12 +82,6 @@ winget install --id=Starship.Starship ;
 # Apply custom Starship config
 Copy-Item -Path .\starship\starship.toml -Destination C:\Users\Turtle\.config\
 
-# Install Windows "ultimate power plan"...WARNING: DO NOT run this on a laptop, comment it out!
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-
-# Activate ultimate power plan
-powercfg -SETACTIVE e9a42b02-d5df-448d-aa00-03f14749eb61
-
 # Install fonts
 
 # Set the source folder and the destination folder
@@ -121,20 +115,21 @@ Set-PathVariable AddPath 'C:\cli'
 # Web browsers
 winget install --id=Brave.Brave -h ;
 winget install --id=Mozilla.Firefox -h ;
-winget install --id=Mullvad.Browser -h -l "C:\MullvadBrowser" ;
+winget install --id=MullvadVPN.MullvadBrowser -h -l "C:\MullvadBrowser" ;
 winget install --id=TorProject.TorBrowser -h -l "C:\TorBrowser" ;
 
 # Downloads
 winget install --id=qBittorrent.qBittorrent -h ;
 winget install --id=OnionShare.OnionShare -h ;
 winget install --id=XavierRoche.HTTrack -h ;
-winget install --id=yt-Stacher.youtube-dl -h ;
+winget install --id=Stacher.youtube-dl -h ;
 
 # Media playback
 winget install --id=VideoLAN.VLC -h ;
 winget install --id=Audacious.MediaPlayer -h ;
 winget install --id=CodecGuide.K-LiteCodecPack.Mega -h ;
 winget install --id=gpodder.gpodder -h ;
+winget install --id=nukeop.nuclear -h ;
 
 # 3D software
 winget install --id=BlenderFoundation.Blender -h ;
@@ -142,6 +137,7 @@ winget install --id=BlenderFoundation.Blender -h ;
 # Audio/video transcoding and manipulation
 winget install --id=Audacity.Audacity -h ;
 winget install --id=Tenpi.Waifu2xGUI -h ;
+winget install --id=Tohrusky.Final2x -h ;
 winget install --id=HandBrake.HandBrake -h ;
 winget install --id=LMMS.LMMS -h ;
 winget install --id=SergeySerkov.TagScanner -h ;
@@ -158,24 +154,31 @@ winget install --id=calibre.calibre -h ;
 winget install --id=SumatraPDF.SumatraPDF -h ;
 winget install --id=TheDocumentFoundation.LibreOffice -h ;
 winget install --id=JohnMacFarlane.Pandoc -h ;
+winget install --id=Ombrelin.PandocGui -h ;
 winget install --id=mb21.panwriter -h ;
+winget install --id=BlindPandasTeam.Bookworm -h ;
+winget install --id=BPBible.BPBible -h ;
+winget install --id=Cyanfish.NAPS2 -h ;
 
 # Social media and communication
 winget install --id=Discord.Discord -h ;
 winget install --id=Mozilla.Thunderbird -h ;
 winget install --id=Guilded.Guilded -h ;
-winget install --id=hellofficiency-inc.raven-reader -h ;
+winget install --id=hello-efficiency-inc.raven-reader -h ;
 winget install --id=HexChat.HexChat -h ;
+winget install --id=RedactSoftware.Redact -h ;
 
 # Alternate frontends
 winget install --id=PrestonN.FreeTube -h ;
 winget install --id=Streamlink.Streamlink -h ;
 winget install --id=Streamlink.Streamlink.TwitchGui -h ;
+winget install --id=ChatterinoTeam.Chatterino -h ;
 
 # Streaming and content creation
 winget install --id=OBSProject.OBSStudio -h ;
 winget install --id=Streamlabs.Streamlabs -h ;
 winget install --id=XSplit.Broadcaster -h ;
+winget install --id=XSplit.VCam -h ;
 winget install --id=Twitch.TwitchStudio -h ;
 winget install --id=Elgato.StreamDeck -h ;
 
@@ -187,6 +190,8 @@ winget install --id=ItchIo.Itch -h ;
 winget install --id=Ubisoft.Connect -h ;
 winget install --id=ElectronicArts.EADesktop -h ;
 winget install --id=Mojang.MinecraftLauncher -h ;
+winget install --id=PrismLauncher.PrismLauncher -h ;
+winget install --id=Amazon.Games -h ;
 winget install --id=Peppy.Osu! -h ;
 winget install --id=Google.PlayGames.Beta -h ;
 winget install --id=RiotGames.Valorant.NA -h ;
@@ -195,9 +200,12 @@ winget install --id=RiotGames.LeagueOfLegends.NA -h ;
 # Gaming utilities
 winget install --id=Codeusa.BorderlessGaming -h ;
 winget install --id=NexusMods.Vortex -h ;
+winget install --id=ebkr.r2modman -h -l "C:\r2modman" ;
 winget install --id=AntiMicroX.antimicrox -h ;
 winget install --id=WeMod.WeMod -h ;
 winget install --id=ZeusSoftware.nGlide -h ;
+winget install --id=JustArchiNET.ArchiSteamFarm -h -l "C:\ASF" ;
+winget install --id=HeroicGamesLauncher.HeroicGamesLauncher -h ;
 
 # System runtimes
 winget install --id=Microsoft.VCRedist.2005.x64 -h ;
@@ -216,11 +224,12 @@ winget install --id=Microsoft.DotNet.DesktopRuntime.3_1 -h ;
 winget install --id=Microsoft.DotNet.DesktopRuntime.5 -h ;
 winget install --id=Microsoft.DotNet.DesktopRuntime.6 -h ;
 winget install --id=Microsoft.DotNet.DesktopRuntime.7 -h ;
+winget install --id=Microsoft.DotNet.DesktopRuntime.8 -h ;
 winget install --id=Microsoft.DotNet.Runtime.3_1 -h ;
 winget install --id=Microsoft.DotNet.Runtime.5 -h ;
 winget install --id=Microsoft.DotNet.Runtime.6 -h ;
 winget install --id=Microsoft.DotNet.Runtime.7 -h ;
-winget install --id=Microsoft.DotNet.Framework.DeveloperPack_4 -h ;
+winget install --id=Microsoft.DotNet.Runtime.8 -h ;
 winget install --id=Microsoft.DirectX -h ;
 winget install --id=Oracle.JavaRuntimeEnvironment -h ;
 
@@ -232,6 +241,8 @@ winget install --id=CrystalDewWorld.CrystalDiskInfo -h ;
 winget install --id=AntibodySoftware.WizTree -h ;
 winget install --id=REALiX.HWiNFO -h ;
 winget install --id=AMD.OCAT -h ;
+winget install --id=TopalaSoftwareSolutions.SIW -h ;
+winget install --id=Belarc.Advisor -h ;
 
 # System benchmarks
 winget install --id=PrimateLabs.Geekbench.6 -h ;
@@ -241,6 +252,7 @@ winget install --id=Unigine.SuperpositionBenchmark -h ;
 winget install --id=Unigine.ValleyBenchmark -h ;
 winget install --id=Unigine.HeavenBenchmark -h ;
 winget install --id=MSI.Kombustor.4 -h ;
+winget install --id=CPUID.powerMAX -h ;
 winget install --id=FinalWire.AIDA64.Extreme -h ;
 winget install --id=CrystalDewWorld.CrystalDiskMark -h ;
 
@@ -254,13 +266,15 @@ winget install --id=DuongDieuPhap.ImageGlass -h ;
 winget install --id=namazso.OpenHashTab -h ;
 winget install --id=WinMerge.WinMerge -h ;
 winget install --id=WinSCP.WinSCP -h ;
-winget install --id=syndicode.iNFektNFOViewer -h ;
+winget install --id=syndicode.iNFekt -h ;
 winget install --id=9NBLGGH5R558 -h ; # Microsoft To Do
 winget install --id=9p7knl5rwt25 --accept-package-agreements -h -l "C:\Sysinternals" ;
+winget install --id=Microsoft.PowerShell -h ;
 
 # Imaging utilities
 winget install --id=LIGHTNINGUK.ImgBurn -h ;
 winget install --id=Rufus.Rufus -h ;
+winget install --id=CrystalIDEASoftware.AnyToISO -h ;
 
 # Network utilities
 winget install --id=Insecure.Nmap -h ;
@@ -273,12 +287,14 @@ winget install --id=Safing.Portmaster -h ;
 
 # Disk cleanup and metadata removal
 winget install --id=BleachBit.BleachBit -h ;
+winget install --id=Klocman.BulkCrapUninstaller -h ;
 winget install --id=szTheory.exifcleaner -h ;
+winget install --id=qarmin.czkawka.cli -h ;
 
 # Text editors and IDEs
 winget install --id=Notepad++.Notepad++ -h ;
 winget install --id=Microsoft.VisualStudioCode -h ;
-choco install qownnotes
+winget install --id=pbek.QOwnNotes -h -l "C:\QOwnNotes" ;
 
 # Project management
 winget install --id=Notion.Notion -h ;
@@ -288,7 +304,7 @@ winget install --id=MSYS2.MSYS2 -h ;
 
 # Interpreters
 winget install --id=OpenJS.NodeJS -h ;
-winget install --id=Python.Python.3.11 -h ;
+winget install --id=Python.Python.3.12 -h ;
 
 # Source control
 winget install --id=Git.Git -h ;
