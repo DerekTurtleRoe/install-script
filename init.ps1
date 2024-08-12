@@ -141,6 +141,7 @@ winget install --id=Tohrusky.Final2x -h ;
 winget install --id=HandBrake.HandBrake -h ;
 winget install --id=LMMS.LMMS -h ;
 winget install --id=SergeySerkov.TagScanner -h ;
+winget install --id=FlorianHeidenreich.Mp3tag -h ;
 winget install --id=Aegisub.Aegisub -h ;
 
 # Image and photo manipulation
@@ -163,7 +164,6 @@ winget install --id=Cyanfish.NAPS2 -h ;
 # Social media and communication
 winget install --id=Discord.Discord -h ;
 winget install --id=Mozilla.Thunderbird -h ;
-winget install --id=Guilded.Guilded -h ;
 winget install --id=hello-efficiency-inc.raven-reader -h ;
 winget install --id=HexChat.HexChat -h ;
 winget install --id=RedactSoftware.Redact -h ;
@@ -179,12 +179,12 @@ winget install --id=OBSProject.OBSStudio -h ;
 winget install --id=Streamlabs.Streamlabs -h ;
 winget install --id=XSplit.Broadcaster -h ;
 winget install --id=XSplit.VCam -h ;
-winget install --id=Twitch.TwitchStudio -h ;
 winget install --id=Elgato.StreamDeck -h ;
 
 # Game clients
 winget install --id=Valve.Steam -h ;
 winget install --id=EpicGames.EpicGamesLauncher -h ;
+winget install --id=HeroicGamesLauncher.HeroicGamesLauncher -h ;
 winget install --id=GOG.Galaxy -h ;
 winget install --id=ItchIo.Itch -h ;
 winget install --id=Ubisoft.Connect -h ;
@@ -205,7 +205,6 @@ winget install --id=AntiMicroX.antimicrox -h ;
 winget install --id=WeMod.WeMod -h ;
 winget install --id=ZeusSoftware.nGlide -h ;
 winget install --id=JustArchiNET.ArchiSteamFarm -h -l "C:\ASF" ;
-winget install --id=HeroicGamesLauncher.HeroicGamesLauncher -h ;
 
 # System runtimes
 winget install --id=Microsoft.VCRedist.2005.x64 -h ;
@@ -262,7 +261,7 @@ winget install --id=ShareX.ShareX -h ;
 winget install --id=File-New-Project.EarTrumpet -h ;
 winget install --id=7zip.7zip -h ;
 winget install --id=Microsoft.PowerToys -h ;
-winget install --id=DuongDieuPhap.ImageGlass -h ;
+winget install --id=nomacs.nomacs -h ;
 winget install --id=namazso.OpenHashTab -h ;
 winget install --id=WinMerge.WinMerge -h ;
 winget install --id=WinSCP.WinSCP -h ;
@@ -274,6 +273,7 @@ winget install --id=Microsoft.PowerShell -h ;
 # Imaging utilities
 winget install --id=LIGHTNINGUK.ImgBurn -h ;
 winget install --id=Rufus.Rufus -h ;
+winget install --id=Balena.Etcher -h ;
 winget install --id=CrystalIDEASoftware.AnyToISO -h ;
 
 # Network utilities
@@ -293,7 +293,8 @@ winget install --id=qarmin.czkawka.cli -h ;
 
 # Text editors and IDEs
 winget install --id=Notepad++.Notepad++ -h ;
-winget install --id=Microsoft.VisualStudioCode -h ;
+#winget install --id=Microsoft.VisualStudioCode -h ;
+winget install --id=VSCodium.VSCodium -h ;
 winget install --id=pbek.QOwnNotes -h -l "C:\QOwnNotes" ;
 
 # Project management
