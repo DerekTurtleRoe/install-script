@@ -140,6 +140,9 @@ winget install --id=Tenpi.Waifu2xGUI -h ;
 winget install --id=Tohrusky.Final2x -h ;
 winget install --id=HandBrake.HandBrake -h ;
 winget install --id=LMMS.LMMS -h ;
+winget install --id=tildearrow.Furnace -h ;
+winget install --id=OpenMPT.OpenMPT -h ;
+winget install --id=MilkyTracker.MilkyTracker -h ;
 winget install --id=SergeySerkov.TagScanner -h ;
 winget install --id=FlorianHeidenreich.Mp3tag -h ;
 winget install --id=Aegisub.Aegisub -h ;
@@ -209,6 +212,21 @@ winget install --id=AntiMicroX.antimicrox -h ;
 winget install --id=WeMod.WeMod -h ;
 winget install --id=ZeusSoftware.nGlide -h ;
 winget install --id=JustArchiNET.ArchiSteamFarm -h -l "C:\ASF" ;
+
+# Emulators
+# winget install --id=Ryujinx.Ryujinx.Ava -h ;
+# winget install --id=joncampbell123.DOSBox-X -h ;
+# winget install --id=ScummVM.ScummVM -h ;
+# winget install --id=PPSSPPTeam.PPSSPP -h ;
+# winget install --id=PCSX2Team.PCSX2 -h ;
+# winget install --id=LIJI32.SameBoy -h ;
+# winget install --id=Libretro.RetroArch -h ;
+# winget install --id=JeffreyPfau.mGBA -h ;
+# winget install --id=FelixRieseberg.MacintoshJS -h ;
+# winget install --id=DolphinEmulator.Dolphin -h ;
+# winget install --id=DOSBoxStaging.DOSBoxStaging -h ;
+# winget install --id=86Box.86BoxManager -h ;
+# winget install --id=Emulationstation.Emulationstation -h ;
 
 # System runtimes
 winget install --id=Microsoft.VCRedist.2005.x64 -h ;
@@ -303,6 +321,8 @@ winget install --id=Notepad++.Notepad++ -h ;
 #winget install --id=Microsoft.VisualStudioCode -h ;
 winget install --id=VSCodium.VSCodium -h ;
 winget install --id=Ollama.Ollama -h ;
+winget install --id=Google.AndroidStudio -h ;
+winget install --id=Microsoft.VisualStudio.2022.Community -h ;
 winget install --id=pbek.QOwnNotes -h -l "C:\QOwnNotes" ;
 
 # Project management
@@ -318,6 +338,7 @@ winget install --id=Python.Python.3.12 -h ;
 # Source control
 winget install --id=Git.Git -h ;
 winget install --id=GitHub.GitHubDesktop -h ;
+winget install --id=Gitleaks.Gitleaks -h ;
 
 # Development of installers
 winget install --id=JRSoftware.InnoSetup -h ;
