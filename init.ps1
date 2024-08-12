@@ -259,6 +259,7 @@ winget install --id=MSI.Kombustor.4 -h ;
 winget install --id=CPUID.powerMAX -h ;
 winget install --id=FinalWire.AIDA64.Extreme -h ;
 winget install --id=CrystalDewWorld.CrystalDiskMark -h ;
+winget install --id=CXWorld.CapFrameX -h ;
 
 # System utilities
 winget install --id=voidtools.Everything -h ;
