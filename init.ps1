@@ -70,11 +70,11 @@ Install-WindowsUpdate -AcceptAll
 Copy-Item -Path .\powershell\Microsoft.PowerShell_profile.ps1 -Destination C:\Users\Turtle\Documents\WindowsPowerShell
 
 # Install Winfetch
-Install-Script winfetch
+# Install-Script winfetch
 
 # Install Winfetch configuration
-Copy-Item -Path .\winfetch\config.ps1 -Destination C:\Users\Turtle\.config\winfetch
-Copy-Item -Path .\winfetch\winfetch.png -Destination C:\Users\Turtle\.config\winfetch
+# Copy-Item -Path .\winfetch\config.ps1 -Destination C:\Users\Turtle\.config\winfetch
+# Copy-Item -Path .\winfetch\winfetch.png -Destination C:\Users\Turtle\.config\winfetch
 
 # Install Starship prompt
 winget install --id=Starship.Starship ;
@@ -161,9 +161,11 @@ winget install --id=mb21.panwriter -h ;
 winget install --id=BlindPandasTeam.Bookworm -h ;
 winget install --id=BPBible.BPBible -h ;
 winget install --id=Cyanfish.NAPS2 -h ;
+winget install --id=GottCode.FocusWriter -h ;
 
 # Social media and communication
 winget install --id=Discord.Discord -h ;
+winget install --id=Vencord.Vesktop -h ;
 winget install --id=Mozilla.Thunderbird -h ;
 winget install --id=hello-efficiency-inc.raven-reader -h ;
 winget install --id=HexChat.HexChat -h ;
@@ -188,6 +190,7 @@ winget install --id=EpicGames.EpicGamesLauncher -h ;
 winget install --id=HeroicGamesLauncher.HeroicGamesLauncher -h ;
 winget install --id=GOG.Galaxy -h ;
 winget install --id=ItchIo.Itch -h ;
+winget install --id=Blizzard.BattleNet -h ;
 winget install --id=Ubisoft.Connect -h ;
 winget install --id=ElectronicArts.EADesktop -h ;
 winget install --id=Mojang.MinecraftLauncher -h ;
@@ -243,6 +246,7 @@ winget install --id=REALiX.HWiNFO -h ;
 winget install --id=AMD.OCAT -h ;
 winget install --id=TopalaSoftwareSolutions.SIW -h ;
 winget install --id=Belarc.Advisor -h ;
+winget install --id=Fastfetch-cli.Fastfetch -h ;
 
 # System benchmarks
 winget install --id=PrimateLabs.Geekbench.6 -h ;
@@ -270,6 +274,7 @@ winget install --id=syndicode.iNFekt -h ;
 winget install --id=9NBLGGH5R558 -h ; # Microsoft To Do
 winget install --id=9p7knl5rwt25 --accept-package-agreements -h -l "C:\Sysinternals" ;
 winget install --id=Microsoft.PowerShell -h ;
+winget install --id=AdrienAllard.FileConverter -h ;
 
 # Imaging utilities
 winget install --id=LIGHTNINGUK.ImgBurn -h ;
@@ -296,6 +301,7 @@ winget install --id=qarmin.czkawka.cli -h ;
 winget install --id=Notepad++.Notepad++ -h ;
 #winget install --id=Microsoft.VisualStudioCode -h ;
 winget install --id=VSCodium.VSCodium -h ;
+winget install --id=Ollama.Ollama -h ;
 winget install --id=pbek.QOwnNotes -h -l "C:\QOwnNotes" ;
 
 # Project management
