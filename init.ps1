@@ -143,6 +143,7 @@ winget install --id=LMMS.LMMS -h ;
 winget install --id=SergeySerkov.TagScanner -h ;
 winget install --id=FlorianHeidenreich.Mp3tag -h ;
 winget install --id=Aegisub.Aegisub -h ;
+winget install --id=MusicBrainz.Picard -h ;
 
 # Image and photo manipulation
 winget install --id=GIMP.GIMP -h ;
