@@ -115,14 +115,22 @@ Set-PathVariable AddPath 'C:\cli'
 # Web browsers
 winget install --id=Brave.Brave -h ;
 winget install --id=Mozilla.Firefox -h ;
-winget install --id=MullvadVPN.MullvadBrowser -h -l "C:\MullvadBrowser" ;
+winget install --id=MullvadVPN.MullvadBrowser -h ;
 winget install --id=TorProject.TorBrowser -h -l "C:\TorBrowser" ;
 
 # Downloads
-winget install --id=qBittorrent.qBittorrent -h ;
+winget install --id=qBittorrent.qBittorrent.Qt6 -h ;
 winget install --id=OnionShare.OnionShare -h ;
 winget install --id=XavierRoche.HTTrack -h ;
+winget install --id=Y2Z.Monolith -h ;
 winget install --id=Stacher.youtube-dl -h ;
+
+# Download managers
+winget install --id=agalwood.Motrix -h ;
+winget install --id=PersepolisDownloadManager.Persepolis -h ;
+winget install --id=AppWork.JDownloader -h ;
+winget install --id=monkeyWie.Gopeed -h ;
+winget install --id=amir1376.ABDownloadManager -h ;
 
 # Media playback
 winget install --id=VideoLAN.VLC -h ;
@@ -130,9 +138,13 @@ winget install --id=Audacious.MediaPlayer -h ;
 winget install --id=CodecGuide.K-LiteCodecPack.Mega -h ;
 winget install --id=gpodder.gpodder -h ;
 winget install --id=nukeop.nuclear -h ;
+winget install --id=staniel359.muffon -h ;
 
 # 3D software
 winget install --id=BlenderFoundation.Blender -h ;
+
+# 3D printing
+# winget install --id=SoftFever.OrcaSlicer -h ;
 
 # Audio/video transcoding and manipulation
 winget install --id=Audacity.Audacity -h ;
@@ -147,12 +159,16 @@ winget install --id=SergeySerkov.TagScanner -h ;
 winget install --id=FlorianHeidenreich.Mp3tag -h ;
 winget install --id=Aegisub.Aegisub -h ;
 winget install --id=MusicBrainz.Picard -h ;
+winget install --id=AndreWiethoff.ExactAudioCopy -h ;
+winget install --id=GianlucaPernigotto.Videomass -h ;
+winget install --id=RandomEngy.VidCoder -h ;
 
 # Image and photo manipulation
 winget install --id=GIMP.GIMP -h ;
 winget install --id=Inkscape.Inkscape -h ;
 winget install --id=darktable.darktable -h ;
 winget install --id=XnSoft.XnViewMP -h ;
+winget install --id=Figma.Figma -h ;
 
 # Office software
 winget install --id=calibre.calibre -h ;
@@ -165,14 +181,20 @@ winget install --id=BlindPandasTeam.Bookworm -h ;
 winget install --id=BPBible.BPBible -h ;
 winget install --id=Cyanfish.NAPS2 -h ;
 winget install --id=GottCode.FocusWriter -h ;
+winget install --id=Sigil-Ebook.Sigil -h ;
 
 # Social media and communication
 winget install --id=Discord.Discord -h ;
 winget install --id=Vencord.Vesktop -h ;
 winget install --id=Mozilla.Thunderbird -h ;
+winget install --id=Proton.ProtonMail -h ;
+winget install --id=Proton.ProtonMailBridge -h ;
 winget install --id=hello-efficiency-inc.raven-reader -h ;
-winget install --id=HexChat.HexChat -h ;
+winget install --id=squidowl.halloy -h ;
 winget install --id=RedactSoftware.Redact -h ;
+winget install --id=Rambox.Rambox.Community -h ;
+winget install --id=OpenWhisperSystems.Signal -h ;
+winget install --id=martinrotter.RSSGuard -h ;
 
 # Alternate frontends
 winget install --id=PrestonN.FreeTube -h ;
@@ -186,8 +208,11 @@ winget install --id=Streamlabs.Streamlabs -h ;
 winget install --id=XSplit.Broadcaster -h ;
 winget install --id=XSplit.VCam -h ;
 winget install --id=Elgato.StreamDeck -h ;
+winget install --id=streamerbot.streamerbot -l "C:\streamerbot" -h ;
+winget install --id=Twitch.TwitchCLI -h ;
 
-# Game clients
+# Game/app clients
+winget install --id=MartiCliment.UniGetUI -h ;
 winget install --id=Valve.Steam -h ;
 winget install --id=EpicGames.EpicGamesLauncher -h ;
 winget install --id=HeroicGamesLauncher.HeroicGamesLauncher -h ;
@@ -198,23 +223,29 @@ winget install --id=Ubisoft.Connect -h ;
 winget install --id=ElectronicArts.EADesktop -h ;
 winget install --id=Mojang.MinecraftLauncher -h ;
 winget install --id=PrismLauncher.PrismLauncher -h ;
-winget install --id=Amazon.Games -h ;
+winget install --id=Playnite.Playnite -h ;
+winget install --id=YendisEntertainment.KrunkerClient -h ;
 winget install --id=Peppy.Osu! -h ;
 winget install --id=Google.PlayGames.Beta -h ;
 winget install --id=RiotGames.Valorant.NA -h ;
 winget install --id=RiotGames.LeagueOfLegends.NA -h ;
+winget install --id=Amazon.Games -h ;
 
 # Gaming utilities
 winget install --id=Codeusa.BorderlessGaming -h ;
-winget install --id=NexusMods.Vortex -h ;
-winget install --id=ebkr.r2modman -h -l "C:\r2modman" ;
 winget install --id=AntiMicroX.antimicrox -h ;
-winget install --id=WeMod.WeMod -h ;
 winget install --id=ZeusSoftware.nGlide -h ;
 winget install --id=JustArchiNET.ArchiSteamFarm -h -l "C:\ASF" ;
 
+# Game modding
+winget install --id=SpecialK.SpecialK -h ;
+winget install --id=WeMod.WeMod -h ;
+winget install --id=NexusMods.Vortex -h ;
+winget install --id=ebkr.r2modman -h -l "C:\r2modman" ;
+winget install --id=ModOrganizer2.modorganizer -h ;
+winget install --id=LOOT.LOOT -h ;
+
 # Emulators
-# winget install --id=Ryujinx.Ryujinx.Ava -h ;
 # winget install --id=joncampbell123.DOSBox-X -h ;
 # winget install --id=ScummVM.ScummVM -h ;
 # winget install --id=PPSSPPTeam.PPSSPP -h ;
@@ -223,10 +254,22 @@ winget install --id=JustArchiNET.ArchiSteamFarm -h -l "C:\ASF" ;
 # winget install --id=Libretro.RetroArch -h ;
 # winget install --id=JeffreyPfau.mGBA -h ;
 # winget install --id=FelixRieseberg.MacintoshJS -h ;
+# winget install --id=FelixRieseberg.Windows95 -h ;
 # winget install --id=DolphinEmulator.Dolphin -h ;
 # winget install --id=DOSBoxStaging.DOSBoxStaging -h ;
 # winget install --id=86Box.86BoxManager -h ;
-# winget install --id=Emulationstation.Emulationstation -h ;
+# winget install --id=ES-DE.EmulationStation-DE -h ;
+# winget install --id=Cemu.Cemu -h ;
+# winget install --id=AresEmulator.Ares -h ;
+# winget install --id=Project64.Project64 -h ;
+# winget install --id=DOSBox.DOSBox -h ;
+
+# Android emulation
+# winget install --id=BlueStack.BlueStacks -h ;
+
+# Virtualization
+winget install --id=Docker.DockerDesktop -h ;
+winget install --id=SoftwareFreedomConservancy.QEMU -h ;
 
 # System runtimes
 winget install --id=Microsoft.VCRedist.2005.x64 -h ;
@@ -261,7 +304,6 @@ winget install --id=CPUID.HWMonitor -h ;
 winget install --id=CrystalDewWorld.CrystalDiskInfo -h ;
 winget install --id=AntibodySoftware.WizTree -h ;
 winget install --id=REALiX.HWiNFO -h ;
-winget install --id=AMD.OCAT -h ;
 winget install --id=TopalaSoftwareSolutions.SIW -h ;
 winget install --id=Belarc.Advisor -h ;
 winget install --id=Fastfetch-cli.Fastfetch -h ;
@@ -276,14 +318,19 @@ winget install --id=Unigine.HeavenBenchmark -h ;
 winget install --id=MSI.Kombustor.4 -h ;
 winget install --id=CPUID.powerMAX -h ;
 winget install --id=FinalWire.AIDA64.Extreme -h ;
-winget install --id=CrystalDewWorld.CrystalDiskMark -h ;
+winget install --id=Maxon.CinebenchR23 -h ;
 winget install --id=CXWorld.CapFrameX -h ;
+winget install --id=Intel.PresentMon -h ;
+winget install --id=Nvidia.FrameView -h ;
+winget install --id=AMD.OCAT -h ;
+winget install --id=Geeks3D.FurMark -h ;
 
 # System utilities
 winget install --id=voidtools.Everything -h ;
 winget install --id=ShareX.ShareX -h ;
 winget install --id=File-New-Project.EarTrumpet -h ;
 winget install --id=7zip.7zip -h ;
+winget install --id=M2Team.NanaZip -h ;
 winget install --id=Microsoft.PowerToys -h ;
 winget install --id=nomacs.nomacs -h ;
 winget install --id=namazso.OpenHashTab -h ;
@@ -294,6 +341,16 @@ winget install --id=9NBLGGH5R558 -h ; # Microsoft To Do
 winget install --id=9p7knl5rwt25 --accept-package-agreements -h -l "C:\Sysinternals" ;
 winget install --id=Microsoft.PowerShell -h ;
 winget install --id=AdrienAllard.FileConverter -h ;
+winget install --id=GoldenDict.GoldenDict -h ;
+winget install --id=Wagnardsoft.DisplayDriverUninstaller -h ;
+winget install --id=Ditto.Ditto -h ;
+winget install --id=QL-Win.QuickLook -h ;
+winget install --id=RustDesk.RustDesk -h ;
+winget install --id=makeworld.merkdir -h ;
+winget install --id=ThioJoe.SvgThumbnailExtension -h ;
+
+# File managers
+winget install --id=MilosParipovic.OneCommander -h ;
 
 # Imaging utilities
 winget install --id=LIGHTNINGUK.ImgBurn -h ;
@@ -306,9 +363,15 @@ winget install --id=Insecure.Nmap -h ;
 winget install --id=angryziber.AngryIPScanner -h ;
 winget install --id=WiresharkFoundation.Wireshark -h ;
 
+# Alternative networks
+winget install --id=i2p.firefox -h ;
+winget install --id=PurpleI2P.i2pd -h ;
+
 # Security
 winget install --id=Bitwarden.Bitwarden -h ;
+winget install --id=ente-io.auth-desktop -h ;
 winget install --id=Safing.Portmaster -h ;
+winget install --id=ClamWin.ClamWin -h ;
 
 # Disk cleanup and metadata removal
 winget install --id=BleachBit.BleachBit -h ;
@@ -316,17 +379,29 @@ winget install --id=Klocman.BulkCrapUninstaller -h ;
 winget install --id=szTheory.exifcleaner -h ;
 winget install --id=qarmin.czkawka.cli -h ;
 
+# Cloud storage
+winget install --id=Google.GoogleDrive -h ;
+winget install --id=Dropbox.Dropbox -h ;
+winget install --id=Proton.ProtonDrive -h ;
+winget install --id=Cryptomator.Cryptomator -h ;
+
+# Privacy
+winget install --id=Proton.ProtonVPN -h ;
+
 # Text editors and IDEs
 winget install --id=Notepad++.Notepad++ -h ;
-#winget install --id=Microsoft.VisualStudioCode -h ;
-winget install --id=VSCodium.VSCodium -h ;
-winget install --id=Ollama.Ollama -h ;
+# winget install --id=Microsoft.VisualStudioCode -h ;
 winget install --id=Google.AndroidStudio -h ;
 winget install --id=Microsoft.VisualStudio.2022.Community -h ;
-winget install --id=pbek.QOwnNotes -h -l "C:\QOwnNotes" ;
+
+# AI chat and code assistants
+winget install --id=Ollama.Ollama -h ;
+winget install --id=CloudStack.Msty -h ;
+winget install --id=pinokiocomputer.pinokio -h ;
 
 # Project management
-winget install --id=Notion.Notion -h ;
+winget install --id=Hugo.Hugo.Extended -h -l "C:\Hugo" ;
+winget install --id=RichardsonSoftware.RazorSQL -h ;
 
 # Compilers
 winget install --id=MSYS2.MSYS2 -h ;
@@ -334,6 +409,7 @@ winget install --id=MSYS2.MSYS2 -h ;
 # Interpreters
 winget install --id=OpenJS.NodeJS -h ;
 winget install --id=Python.Python.3.12 -h ;
+winget install --id=GoLang.Go -h ;
 
 # Source control
 winget install --id=Git.Git -h ;
@@ -345,16 +421,36 @@ winget install --id=JRSoftware.InnoSetup -h ;
 winget install --id=kymoto.InnoScriptStudio -h ;
 winget install --id=NSIS.NSIS -h ;
 
-# Static analysis tools
+# Code analysis tools
 winget install --id=Cppcheck.Cppcheck -h ;
+winget install --id=BaldurKarlsson.RenderDoc -h ;
 
 # Game development
 winget install --id=GDevelop.GDevelop -h ;
+winget install --id=GodotEngine.GodotEngine -h ;
+winget install --id=deepnight.LDtk -h ;
+winget install --id=TrenchBroom.TrenchBroom -h ;
 
 # Documentation
 winget install --id=OlegShparber.Zeal -h ;
+winget install --id=acaudwell.Gource -h ;
+winget install --id=dbrgn.tealdeer -h ;
+winget install --id=Kiwix.KiwixJS -h ;
 
 # Reverse-engineering
 winget install --id=dnSpyEx.dnSpy -h -l "C:\dnSpyEx" ;
 winget install --id=icsharpcode.ILSpy -h ;
 winget install --id=WerWolv.ImHex -h ;
+winget install --id=Carmix.HexWalk -h ;
+winget install --id=elbereth.DragonUnPACKer -h ;
+winget install --id=AssetRipper.AssetRipper -h ;
+winget install --id=Maltego.Maltego -h ;
+winget install --id=uxmal.reko -h ;
+winget install --id=mentebinaria.retoolkit -h ;
+winget install --id=Rizin.Cutter -h ;
+winget install --id=Hex-Rays.IDA.Free -h ;
+winget install --id=JPEXS.FFDec -h ;
+winget install --id=AngusJohnson.ResourceHacker -h ;
+winget install --id=hasherezade.PE-bear -h ;
+winget install --id=OpenGMK.GM8Decompiler.GNU -h ;
+winget install --id=OpenGMK.GM8Decompiler.MSVC -h ;
